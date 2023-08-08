@@ -126,6 +126,7 @@ header a {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3.75rem;
   align-self: center;
+  margin: 0 4.5rem;
   margin-top: 3.6rem;
 }
 .collections .products .product {
@@ -214,16 +215,18 @@ header a {
 .about-us {
   margin: 1rem auto;
 }
-.about-us .container {
+.about-us .container-1 {
   display: grid;
   grid-template-columns: 55% 45%;
-  max-width: 1200px;
+  grid-column-gap: 2rem;
+  margin: 0 auto;
+  max-width: 75rem;
 }
-.about-us .container .details {
+.about-us .container-1 .details {
   width: 100%;
   height: auto;
 }
-.about-us .container .details .heading-cap {
+.about-us .container-1 .details .heading-cap {
   color: #e91d24;
   font-family: Inter;
   font-size: 0.75rem;
@@ -232,7 +235,7 @@ header a {
   line-height: normal;
   text-transform: uppercase;
 }
-.about-us .container .details .heading {
+.about-us .container-1 .details .heading {
   color: #070305;
   font-family: Inter;
   font-size: 2rem;
@@ -240,7 +243,7 @@ header a {
   font-weight: 700;
   line-height: normal;
 }
-.about-us .container .details .description {
+.about-us .container-1 .details .description {
   margin-top: 1.37rem;
   word-break: keep-all;
   color: #666;
@@ -250,7 +253,7 @@ header a {
   font-weight: 400;
   line-height: 1.5625rem;
 }
-.about-us .container .details .read-more {
+.about-us .container-1 .details .read-more {
   display: inline-block;
   margin-top: 1rem;
   color: #070305;
@@ -260,12 +263,11 @@ header a {
   font-weight: 500;
   line-height: normal;
 }
-.about-us .container .cards {
+.about-us .container-1 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 1rem;
 }
-.about-us .container .cards .card {
+.about-us .container-1 .cards .card {
   width: 15rem;
   height: 4rem;
   display: flex;
@@ -274,16 +276,133 @@ header a {
   border-radius: 0.375rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.about-us .container .cards .card span {
+.about-us .container-1 .cards .card span {
   margin: 0 1rem;
 }
-.about-us .container .cards .card .title {
+.about-us .container-1 .cards .card .title {
   color: #666;
   font-family: Inter;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+/* Just for You */
+.just-for-you {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.just-for-you .label {
+  margin-top: 3.63rem;
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+}
+.just-for-you .label .head {
+  font-weight: 700;
+  line-height: normal;
+  color: #070305;
+  font-size: 2rem;
+}
+.just-for-you .label .sub-head {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+  color: #e91d24;
+}
+.just-for-you .description {
+  color: #666;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem; /* 156.25% */
+}
+.just-for-you .products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3.75rem;
+  align-self: center;
+  margin: 0 4.5rem;
+  margin-top: 3.6rem;
+}
+.just-for-you .products .product {
+  position: relative;
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0.95rem;
+}
+.just-for-you .products .product img {
+  display: block;
+}
+.just-for-you .products .product::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.just-for-you .products .product .details {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 1.8rem;
+  z-index: 2;
+}
+.just-for-you .products .product .details h3 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+.just-for-you .products .product .details h3::after {
+  content: "";
+  position: absolute;
+  bottom: -0.37rem;
+  left: 0;
+  border: 1px solid #e91d24;
+  width: 3.3rem;
+}
+.just-for-you .products .product:nth-child(even) {
+  margin-top: -1.33rem;
+  overflow: hidden;
+}
+.just-for-you .all-categories {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.just-for-you .all-categories button {
+  width: 14rem;
+  height: 3rem;
+  display: inline-flex;
+  padding: 0.625rem 0.9375rem;
+  align-items: center;
+  gap: 0.875rem;
+  justify-content: center;
+  color: #333;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 0.625rem;
+  background: #fff;
+  box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.06);
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Reusable class */
@@ -301,6 +420,11 @@ header a {
 
 .items-center {
   align-items: center;
+}
+
+.container {
+  max-width: 85rem;
+  margin: 1rem auto;
 }
 
 a {
